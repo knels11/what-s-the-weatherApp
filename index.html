@@ -1,36 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Map API-->
+    <script src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css" />
+
     <!--Bootstrap CSS-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!--materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title> Weather App </title>
 </head>
 
-<body>
-    <header> Welcome to your local <strong>Weather </strong>dashboard! </header>
+<body style="text-align:center;">
+    <h1 class="heading" style="text-align:center;"> Local Weather App </h1>
+    <p class="introduction"> Welcome to your local <strong> Weather </strong> dashboard! </p>
 
-    <section class="top">
-        <div class= "input-group mb-3" id="container">
-            <h1 class="heading"> Local Weather App </h1>
-            <form class="box" id="search">
-                <span class="input-group-text" id="inputGroup-sizing-default"> City </span>
-                <input type="text" class="form-control" aria-label="sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="enter city">
+    <div class="input-group mb-3" id="container">
 
-                <button type="location"> Locate </button>
-            </form>
-        </div>
-    </section>
+        <form class="box" id="search" style="text-align:center;">
+            <!-- City Search Input -->
+            <span class="input-group-text" id="inputGroup-sizing-default"> City </span>
+            <input type="text" class="form-control" aria-label="sizing example input"
+                aria-describedby="inputGroup-sizing-default" placeholder="enter city">
+            <!-- State Search Input-->
+            <span class="input-group-text" id="inputGroup-sizing-default"> State </span>
+            <input type="text" class="form-control" aria-label="sizing example input"
+                aria-describedby="inputGroup-sizing-default" placeholder="enter city">
+            <!--Locate Button-->
+            <button type="location"> Locate </button>
+        </form>
+    </div>
+
     <pre id="json" class="current-weather">
         <div class="container" id= "todays-weather">
             <ul class="city"></ul>
         </div>
     </pre>
     <!--JS Bootstrap w Popper-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src= "./script.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
 </body>
+
 </html>
